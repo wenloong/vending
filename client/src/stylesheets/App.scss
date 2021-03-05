@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$border: 5px;
+
+html {
+  background: #F9F9F9;
+  font-family: 'Poppins', sans-serif;
+}
+
+.App {
+  // background: linear-gradient(45deg, rgb(132, 94, 194) 0%, #D65DB1 20%, #FF6F91 40%, #FF9671 57%, #FFC75F 80%, #F9F871 100%);
+  &__wrapper {
+    padding: 0 7vw;
+  }
+}
+
+.Homepage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+
+  &__left, &__right {
+    width: 50%;
+  }
+
+  &__right {
+    text-align: right;
+  }
+
+  &__header {
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+  
+  &__subheader {
+    font-size: 1.2em;
+  }
+
+  img {
+    width: 70%;
+    height: auto;
+  }
+}
+
+.VendingMachineList {
+  display: flex;
+  gap: 50px;
+}
+
+.VendingMachineItem {
+  border-radius: $border;
+  text-align: center;
+  width: 33.33%;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    border-radius: $border;
+    -webkit-box-shadow: 0px 7px 10px 8px rgba(51,51,51,0.4); 
+    box-shadow: 0px 7px 10px 8px rgba(51,51,51,0.4);
+  }
+
+  &__text {
+    font-size: 1.2rem;
+  }
+}
+
+.VendingMachineID {
+  width: 50%;
+  max-width: 50%;
+  margin: auto;
+  margin-top: 1.5rem;
+
+  &__console {
+    background-color: #393939;
+    color: #F9F9F9;
+    padding: 10px 20px;
+    border-radius: $border;
+  }
+
+  &__consoleProduct {
+    p {
+      margin: 0;
+    }
+  }
+
+  &__subheader {
+    font-size: 1.2em;
+  }
+
+  &__drinkSelection {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    img {
+      width: 100%;
+      height: 50%;
+    }
+  }
+
+  &__moneyInsertion {
+    display: flex;
+    gap: 10px;
+    color: #333;
+
+    p {
+      margin: 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      width: 100px;
+      height: 40px;
+      color: #F9F9F9;
+      font-weight: bold;
+      border-radius: $border;
+      background-color: #3db866;
+    }
+  }
+
+  &__purchase {
+    margin-top: 2rem;
+    border: none;
+    background-color: #cf6d6d;
+    color: #F9F9F9;
+    padding: 10px 20px;
+    border-radius: $border;
+    cursor: pointer;
+  }
+
+  &__open {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    background-color: #a1c54c;
+    border: none;
+    color: #F9F9F9;
+    padding: 10px 20px;
+    border-radius: $border;
+    cursor: pointer;
+  }
+}
+
+.Soda {
+  background-color: #D8D8D8;
+  border-radius: $border;
+  width: calc(25% - 20px);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.BackButton {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  border: none;
+  background: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.VendingMachine {
+  border: 1px solid #f9f9f9;
+  padding: 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+
+  &__selection {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  &__console {
+    background: rgba( 51, 51, 51, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    font-family: 'Press Start 2P', cursive;
+
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #f9f9f9; 
+  }
+
+  &__productSelection {
+    
+    p:not(:first-child) {
+      margin: 0;
+    }    
+  }
+
+  &__buttons {
+    margin-top: 15px;
+
+    button {
+      background: rgba( 17, 17, 17, 0.70 );
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      backdrop-filter: blur( 4px );
+      -webkit-backdrop-filter: blur( 4px );
+      border-radius: 5px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+      color: #F9F9F9;
+      padding: 7px 15px;
+      margin-right: 10px;
+    }
+  } 
+}
+
+.Modal {
+  margin-top: 50px;
+
+  input {
+    margin: 0 10px;
+    padding: 10px;
+    border: none;
+    border-radius: $border;
+    background-color: #D8D8D8;
+    color: #333;
+  }
+
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: $border;
+    cursor: pointer;
+  }
+}
+
+.SodaList {
+  margin-top: 2.5rem;
+
+  table {
+    width: 100%;
+    text-align: left;
+  }
+
+  th, td {
+    color: #333333;
+  }
+
+  th {
+    padding: 10px 0;
+  }
+
+  td {
+    padding: 5px 0;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.Button {
+  &--edit {
+    color: #a1c54c;
+  }
+
+  &--delete {
+    color: #cf6d6d;
+  }
+
+  &__deleteVending {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+.Input {
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
